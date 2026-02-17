@@ -25,9 +25,73 @@
         ymaps.ready(function() {
             map = new ymaps.Map('map', {
                 center: [55.75, 37.62],
-                zoom: 10
+              asfasfasfasf  zoom: 10
             });
 
+            // Создаем маркер с поsadasdдписью сверху
+            // Создаем маркер с подписью сверху
+            const placemark = new ymaps.Placemark(
+                [55.75, 37.62],
+                {
+                    iconContent: 'Москва',  // текст внутри метки
+                    hintContent: 'Мой маркер!',
+                    balloonContent: 'Это просто маркер'
+                },
+                {
+                    preset: 'islands#blueStretchyIcon',  // растягивающаяся иконка с текстом
+                    iconColor: '#ff0000'  // цвет маркера
+                }
+            );
+
+            map.geoObjects.add(placemark);
+            
+            // Альтернативный вариант с отдельной подписью
+            const placemark2 = new ymaps.Placemark(
+                [55.76, 37.64],
+                {
+                    iconCaption: 'Санкт-Петербург',  // подпись справа от маркера
+                    hintContent: 'Подпись справа'
+                },
+                {
+                    preset: 'islands#redDotIconWithCaption'  // иконка с подписью справа
+                }
+            );
+            
+            map.geoObjects.add(placemark2);
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яндекс Карта с подписью</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script>
+        let map;
+
+        ymaps.ready(function() {
+            map = new ymaps.Map('map', {
+                center: [55.75, 37.62],
+              asfasfasfasf  zoom: 10
+            });
+
+            // Создаем маркер с поsadasdдписью сверху
             // Создаем маркер с подписью сверху
             const placemark = new ymaps.Placemark(
                 [55.75, 37.62],
