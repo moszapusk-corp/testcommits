@@ -15,49 +15,5 @@
         }
     </style>
 </head>
-<body>
-    <div id="map"></div>
-
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script>
-        let map;
-
-        ymaps.ready(function() {
-            map = new ymaps.Map('map', {
-                center: [55.75, 37.62],
-                zoom: 10
-            });
-
-            // Создаем маркер с подписью сверху
-            const placemark = new ymaps.Placemark(
-                [55.75, 37.62],
-                {
-                    iconContent: 'Москва',  // текст внутри метки
-                    hintContent: 'Мой маркер!',
-                    balloonContent: 'Это просто маркер'
-                },
-                {
-                    preset: 'islands#blueStretchyIcon',  // растягивающаяся иконка с текстом
-                    iconColor: '#ff0000'  // цвет маркера
-                }
-            );
-
-            map.geoObjects.add(placemark);
-            
-            // Альтернативный вариант с отдельной подписью
-            const placemark2 = new ymaps.Placemark(
-                [55.76, 37.64],
-                {
-                    iconCaption: 'Санкт-Петербург',  // подпись справа от маркера
-                    hintContent: 'Подпись справа'
-                },
-                {
-                    preset: 'islands#redDotIconWithCaption'  // иконка с подписью справа
-                }
-            );
-            
-            map.geoObjects.add(placemark2);
-        });
-    </script>
-</body>
+dsfsadfsf
 </html>
